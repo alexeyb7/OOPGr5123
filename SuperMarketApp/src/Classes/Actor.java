@@ -1,7 +1,9 @@
 package Classes;
 
 import Interfaces.iActorBehaviour;
+import Interfaces.iReturnOrder;
 
+//public abstract class Actor implements iActorBehaviour, iReturnOrder {
 public abstract class Actor implements iActorBehaviour {
 
     protected String name;
