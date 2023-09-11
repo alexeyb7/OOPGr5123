@@ -38,4 +38,10 @@ public class OrdinaryClient extends Actor {
     public void setName(String name) {
         super.name = name;
     }
+
+    @Override
+    public boolean isReturnOrder() {
+        // TODO Auto-generated method stub
+        return isReturnOrder();
+    }
 }

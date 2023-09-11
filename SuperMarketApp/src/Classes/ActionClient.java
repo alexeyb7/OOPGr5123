@@ -1,9 +1,11 @@
 package Classes;
 
-import Interfaces.iActorBehaviour;
+//import Interfaces.iActorBehaviour;
+import Interfaces.iReturnOrder;
 
 /**
- * Класс ActionClient определяет акционного клиента
+ * Класс ActionClient определяет акционного клиента,
+ * наследование от класса Actor
  */
 public class ActionClient extends Actor {
     /*
@@ -96,10 +98,13 @@ public class ActionClient extends Actor {
     }
 
     @Override
-    public boolean setTakeOrder(boolean take) {
+    public void setTakeOrder(boolean take) {
+        if (take && ActionClient.actionCount >= ActionClient.maxActionCount) {
+            return;
+        }
         ActionClient.actionCount++;
         super.isTakeOrder = take;
-        return true;
+
     }
 
     @Override
@@ -112,9 +117,19 @@ public class ActionClient extends Actor {
         return this;
     }
 
+    /*
+     * Возвращает товар вместе с уменьшением кол-ва покупателей
+     */
     @Override
     public void returnOrder() {
         super.returnOrder();
         maxActionCount--;
     }
+
+    @Override
+    public boolean isReturnOrder() {
+        //
+        return isReturnOrder();
+    }
+
 }

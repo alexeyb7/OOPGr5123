@@ -47,6 +47,12 @@ public class SpecialClient extends Actor {
         this.idVIP = idVIP;
     }
 
+    @Override
+    public boolean isReturnOrder() {
+        // TODO Auto-generated method stub
+        return isReturnOrder();
+    }
+
     // public int getIdVIP() {
     // return idVIP;
     // }
