@@ -4,6 +4,7 @@ import java.util.List;
 
 import Domain.Student;
 import Domain.StudentGroup;
+import Domain.StudentSteam;
 
 public class App {
     public static void main(String[] args) throws Exception {
