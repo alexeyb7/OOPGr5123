@@ -76,12 +76,25 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
 
     @Override
     public int compareTo(StudentGroup o) {
+        if (this.group.size() == o.group.size()) {
+            if (this.getIdGroup() == o.getIdGroup()) {
+                return 0;
+            } else if (this.getIdGroup() < o.getIdGroup()) {
+                return -1;
+            } else {
+                return 1;
+            }
 
-        return 0;
+        } else if (this.group.size() < o.group.size()) {
+            return -1;
+        } else {
+            return 1;
+        }
+
     }
 
     public char[] getStudent(int i) {
-        return null;
+        return getStudent(i);
     }
 
 }
