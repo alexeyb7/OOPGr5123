@@ -33,7 +33,7 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
         return "StudentGroup{" +
                 "group=" + group +
                 ", idGroup=" + idGroup +
-                '}';
+                '}' + " кол-во студентов " + group.size();
     }
 
     // @Override
@@ -76,6 +76,7 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
 
     @Override
     public int compareTo(StudentGroup o) {
+
         return 0;
     }
 
