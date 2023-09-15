@@ -58,12 +58,14 @@ public class App {
 
         StudentSteam steam1 = new StudentSteam(studentGroupList, 1);// создание потока студентов
 
-        for (StudentGroup group : steam1) {
-            System.out.println(group);
-            for (Student stud : group) {
-                System.out.println(stud);
-            }
-        }
+        /*
+         * / for (StudentGroup group : steam1) {
+         * System.out.println(group);
+         * for (Student stud : group) {
+         * System.out.println(group);
+         * }
+         * }
+         */
         System.out.println("=========================================================");
 
         Collections.sort(steam1.getListGroups());
