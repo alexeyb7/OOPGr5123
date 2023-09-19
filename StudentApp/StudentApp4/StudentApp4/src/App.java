@@ -53,8 +53,10 @@ public class App {
 
         AccountController.paySalary(t1, 50000);
         AccountController.paySalary(t2, 75000);
-
-        System.out.println(AccountController.averageAge(listStud));
+        /*
+         * Вызов метода подсчета среднего возраста для списка студентов
+         */
+        System.out.println(" Средний возраст студентов в группе 4580:" + AccountController.averageAge(listStud));
 
     }
 }

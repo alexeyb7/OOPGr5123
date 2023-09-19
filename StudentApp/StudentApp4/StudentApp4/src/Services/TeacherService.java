@@ -8,6 +8,9 @@ import Domain.PersonComparator;
 
 import Domain.Teacher;
 
+/*
+ * класс для работы с преподавателями
+ */
 public class TeacherService implements iPersonService<Teacher> {
 
     private int count;
@@ -22,14 +25,20 @@ public class TeacherService implements iPersonService<Teacher> {
         return teachers;
     }
 
+    /*
+     * добавление преподавателей
+     */
     @Override
     public void create(String firstName, int age) {
-        String acadDegree = " ";// ?
-        Teacher teach = new Teacher(firstName, age, acadDegree);
+
+        Teacher teach = new Teacher(firstName, age, "teacher");
         count++;
         teachers.add(teach);
     }
 
+    /*
+     * метод сортировки преподавателей по ФИО
+     */
     public void sortByFIO() {
         PersonComparator<Teacher> persComp = new PersonComparator<Teacher>();
         teachers.sort(persComp);
