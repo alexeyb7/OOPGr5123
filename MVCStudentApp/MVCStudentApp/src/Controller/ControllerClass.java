@@ -47,9 +47,12 @@ public class ControllerClass {
         Command com = Command.NONE;
         boolean getNewIter = true;
         while (getNewIter) {
-            String command = view.prompt("Введите команду:");
+            String command = view.prompt("Enter Command: ADD, DELETE, EXIT");
             com = Command.valueOf(command.toUpperCase());
             switch (com) {
+                case ADD:
+                case DELETE:
+
                 case EXIT:
                     getNewIter = false;
                     System.out.println("Выход из программы");

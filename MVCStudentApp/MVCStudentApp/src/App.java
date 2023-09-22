@@ -8,6 +8,7 @@ import Model.ModelClassFile;
 import Model.ModelClassList;
 import Model.Core.Student;
 import View.ViewClass;
+import View.ViewClassEn;
 
 public class App {
         public static void main(String[] args) throws Exception {
@@ -35,7 +36,9 @@ public class App {
                 // ViewClass view = new ViewClass();
 
                 iGetModel modelList = fModel;// new ModelClassList(students);
-                iGetView view = new ViewClass();
+                // iGetView view = new ViewClass();
+                iGetView view = new ViewClassEn();
+                iGetView model = new ModelClassHash();
 
                 ControllerClass controller = new ControllerClass(modelList, view);
 
