@@ -7,13 +7,19 @@ import java.util.List;
 import java.util.Map;
 
 import Model.Core.Student;
+/*
+ * Класс - модель с применением HashMap для хранения информации о студентах
+ */
 
 public class ModelClassHash implements iGetView {
 
     private Map<Long, Student> studentMap;
 
+    /*
+     * Конструктор инициализирует хэш-таблицу для хранения данных о студентах
+     */
     public ModelClassHash() {
-        this.studentMap = new HashMap<>(0, 0);
+        this.studentMap = new HashMap<>(5, 1);
     }
 
     @Override

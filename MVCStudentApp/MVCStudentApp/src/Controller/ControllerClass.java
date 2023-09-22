@@ -53,8 +53,8 @@ public class ControllerClass {
         Scanner scanner = new Scanner(System.in);
         while (getNewIter) {
             view.display("Enter Command: ADD, DELETE, EXIT");
-            // String command = scanner.next();
-            String command = view.prompt("Enter Command: ADD, DELETE, EXIT");
+            String command = scanner.next();
+            // String command = view.prompt("Enter Command: ADD, DELETE, EXIT");
             com = Command.valueOf(command.toUpperCase());
 
             switch (com) {
