@@ -30,18 +30,18 @@ public class App {
                 students.add(s6);
                 students.add(s7);
 
-                ModelClassFile fModel = new ModelClassFile("StudentDB.csv");
+                // ModelClassFile fModel = new ModelClassFile("StudentDB.csv");
                 // fModel.saveAllStudentToFile(students);
 
                 // ModelClassList modelList = new ModelClassList(students);
                 // ViewClass view = new ViewClass();
 
-                iGetModel modelList = fModel;// new ModelClassList(students);
+                // iGetModel modelList = fModel;// new ModelClassList(students);
                 // iGetView view = new ViewClass();
                 iGetView view = new ViewClassEn();
                 iGetView model = new ModelClassHash();
 
-                ControllerClass controller = new ControllerClass(modelList, view);
+                ControllerClass controller = new ControllerClass(null, view);
 
                 // controller.update();
                 controller.run();

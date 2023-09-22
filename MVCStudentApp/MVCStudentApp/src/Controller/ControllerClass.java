@@ -44,22 +44,29 @@ public class ControllerClass {
         // view.printAllStudent(model.getStudents());
     }
 
+    /*
+     * добавлены команды в метоl run
+     */
     public void run() {
         Command com = Command.NONE;
         boolean getNewIter = true;
         Scanner scanner = new Scanner(System.in);
         while (getNewIter) {
-
+            view.display("Enter Command: ADD, DELETE, EXIT");
+            // String command = scanner.next();
             String command = view.prompt("Enter Command: ADD, DELETE, EXIT");
             com = Command.valueOf(command.toUpperCase());
 
             switch (com) {
                 case ADD:
+                    /*
+                     * запрос данных о студенте
+                     */
                     command = view.prompt("Enter student id");
                     long id = scanner.nextLong();
                     command = view.prompt("Enter student name");
                     String name = scanner.next();
-                    Student student = new Student(name, age);
+                    Student student = new Student(name, 0);
                     model.addStudent(id, student);
                     view.prompt("Student added");
                     break;

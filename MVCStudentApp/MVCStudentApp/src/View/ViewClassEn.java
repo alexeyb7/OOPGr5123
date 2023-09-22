@@ -7,7 +7,9 @@ import Controller.Interfaces.iGetView;
 import Model.Core.Student;
 
 public class ViewClassEn implements iGetView {
-
+    /*
+     * метод добавления студента
+     */
     @Override
     public void addStudent(long id, Student student) {
 
@@ -30,25 +32,28 @@ public class ViewClassEn implements iGetView {
 
     @Override
     public void printAllStudent(List<Student> students) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'printAllStudent'");
+        return;
     }
 
     @Override
     public String prompt(String msg) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'prompt'");
+        return " ";
     }
 
+    /*
+     * метод удаление студента по id
+     */
     @Override
     public void deleteStudent(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
+        return;
     }
 
+    /**
+     * метод отображения текста на англ. языке
+     */
     @Override
     public void display(String s) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'display'");
+        System.out.println("English view:" + s);
+        ;
     }
 }

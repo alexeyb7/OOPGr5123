@@ -59,14 +59,12 @@ public class ModelClassFile implements iGetModel {
 
     @Override
     public void addStudent(long id, Student student) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addStudent'");
+        return;
     }
 
     @Override
     public void deleteStudent(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
+        return;
     }
 
 }
