@@ -3,7 +3,7 @@ package Controller;
 public enum Command {
     NONE,
     READ,
-    CREATE,
+    ADD,
     UPDATE,
     LIST,
     DELETE,

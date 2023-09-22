@@ -21,4 +21,22 @@ public class ViewClass implements iGetView {
         System.out.println(msg);
         return in.nextLine();
     }
+
+    @Override
+    public void addStudent(long id, Student student) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addStudent'");
+    }
+
+    @Override
+    public void deleteStudent(long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
+    }
+
+    @Override
+    public void display(String s) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'display'");
+    }
 }

@@ -2,6 +2,7 @@ package Controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
@@ -46,17 +47,31 @@ public class ControllerClass {
     public void run() {
         Command com = Command.NONE;
         boolean getNewIter = true;
+        Scanner scanner = new Scanner(System.in);
         while (getNewIter) {
+
             String command = view.prompt("Enter Command: ADD, DELETE, EXIT");
             com = Command.valueOf(command.toUpperCase());
+
             switch (com) {
                 case ADD:
+                    command = view.prompt("Enter student id");
+                    long id = scanner.nextLong();
+                    command = view.prompt("Enter student name");
+                    String name = scanner.next();
+                    Student student = new Student(name, age);
+                    model.addStudent(id, student);
+                    view.prompt("Student added");
+                    break;
                 case DELETE:
-
+                    view.prompt("Enter student id to delete");
+                    long idToDelete = scanner.nextLong();
+                    model.deleteStudent(idToDelete);
                 case EXIT:
                     getNewIter = false;
-                    System.out.println("Выход из программы");
-                    break;
+                    System.out.println("Exit ");
+                    scanner.close();
+                    return;
                 case LIST:
                     view.printAllStudent(model.getStudents());
                     break;

@@ -5,6 +5,7 @@ import Controller.ControllerClass;
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
 import Model.ModelClassFile;
+import Model.ModelClassHash;
 import Model.ModelClassList;
 import Model.Core.Student;
 import View.ViewClass;
